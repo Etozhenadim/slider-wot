@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style.scss';
-import App from './App';
+
+import {Slider} from './layout/Slider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Slider />
   </React.StrictMode>
 );
