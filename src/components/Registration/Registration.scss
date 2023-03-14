@@ -1,0 +1,71 @@
+.registration {
+  position: absolute;
+  left:0;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  height: 606px;
+  max-width: 596px;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../../public/assets/banners/germany.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 592px;
+    max-height: 474px;
+    height: 100%;
+    z-index: 9;
+  }
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 98px;
+    z-index: 9;
+    &--title{
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 47px;
+      max-height: 140px;
+    }
+    &--text {
+      margin-top: 18px;
+      max-width: 275px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 27px;
+      color: rgba(249, 245, 225, 0.5);
+    }
+    &--button {
+      position: relative;
+      margin-top: 66px;
+      padding: 15px 0;
+      width: 308px;
+      color: #F9F5E1;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 31px;
+      text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51);
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%);
+      //&:after {
+      //  border-left: 1px solid transparent;
+      //  width: 50px;
+      //  height: 30px;
+      //  content: '';
+      //  position: absolute;
+      //  transform: rotate(50deg);
+      //  right: -31px;
+      //  bottom: -25px;
+      //  background: #1C1B16;
+      //}
+    }
+  }
+
+
+
+}

@@ -10,15 +10,19 @@ import {data} from './data'
 export const SwiperFlags = () =>{
     return (
         <div className='slider_swiper'>
-
             <Swiper
                 modules={[Pagination, Navigation, Autoplay]}
                 {...swiperSettings}
             >
-
-                {
-                    data && data.map(item=>{
-                       return <SwiperSlide><img src={item.icon} alt=""/>42334</SwiperSlide>
+                {data && data.map(item=>{
+                       return (
+                           <SwiperSlide key={item.id}>
+                           <div className='slider_swiper--item'>
+                               <img src={item.icon} alt={item.title}/>
+                               {item.title}
+                           </div>
+                         </SwiperSlide>
+                       )
                     })
                 }
 

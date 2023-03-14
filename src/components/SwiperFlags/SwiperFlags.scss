@@ -1,9 +1,22 @@
 .slider_swiper{
-  width: 800px;
+  width: 1258px;
+  height: 144px;
   margin: 0 auto;
+  //margin: 0 145px;
 
-  & img {
-    width: 90px;
-    height: 70px;
+  &--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba(249, 245, 225, 0.5);
+    & img {
+      width: 90px;
+      height: 70px;
+      margin-bottom: 5px;
+    }
   }
 }

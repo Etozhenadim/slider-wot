@@ -1,0 +1,70 @@
+
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1440px;
+  height: 688px;
+  background-image: url('../../../public/assets/banners/bg-nation-d.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  &_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-height: 540px;
+  }
+  &_title {
+    font-weight: 900;
+    font-size: 175px;
+    line-height: 205px;
+    text-align: center;
+    -webkit-text-stroke: 2px #F9F5E1;
+    color: transparent;
+  }
+
+  &_additional {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 302px;
+    z-index: 10;
+    &--title {
+      font-weight: 700;
+      font-size: 175px;
+      line-height: 100%;
+    }
+    &--text {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+
+      color: rgba(249, 245, 225, 0.5);
+    }
+  }
+
+  &_list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    min-width: 616px;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  & img{
+    position: absolute;
+    width: 100%;
+  }
+}

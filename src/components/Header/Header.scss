@@ -1,11 +1,12 @@
 .slider_header {
+  position: absolute;
+  top: 60px;
+  z-index: 999;
   width: 100%;
-  margin-top: 20px;
   &--title {
     font-weight: 800;
     font-size: 85px;
     line-height: 100px;
     text-align: center;
-    text-transform: uppercase;
   }
 }
