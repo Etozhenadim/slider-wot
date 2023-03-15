@@ -27,25 +27,26 @@ export const SwiperFlags = () =>{
                            <SwiperSlide key={item.id}>
                            <div className='slider_swiper--item'>
                                <img src={item.icon} alt={item.title}/>
-                               {item.title}
+                               <span>
+                               {item.title}</span>
                            </div>
                          </SwiperSlide>
                        )
                     })
                 }
-                <>
-                    <button
-                        type="button"
-                        className="swiper-button-prev"
-                        ref={prevButtonRef}
-                    >Test Prev</button>
-                    <button
-                        type="button"
-                        className="swiper-button-next"
-                        ref={nextButtonRef}
-                    >Text Next</button>
-                </>
             </Swiper>
+            <>
+                <button
+                    type="button"
+                    className="swiper-button-prev"
+                    ref={prevButtonRef}
+                />
+                <button
+                    type="button"
+                    className="swiper-button-next"
+                    ref={nextButtonRef}
+                />
+            </>
         </div>
 
     )

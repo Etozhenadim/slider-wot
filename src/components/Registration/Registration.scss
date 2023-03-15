@@ -52,17 +52,16 @@
       text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51);
       text-transform: uppercase;
       background: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%);
-      //&:after {
-      //  border-left: 1px solid transparent;
-      //  width: 50px;
-      //  height: 30px;
-      //  content: '';
-      //  position: absolute;
-      //  transform: rotate(50deg);
-      //  right: -31px;
-      //  bottom: -25px;
-      //  background: #1C1B16;
-      //}
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0; right: 0;
+        border-bottom: 30px solid #1C1B16;
+        border-left: 30px solid transparent;
+        width: 0;
+      }
+
     }
   }
 

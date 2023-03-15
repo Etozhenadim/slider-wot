@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const getSwiperNavigationSettings = (
     prevButtonRef,
     nextButtonRef,
