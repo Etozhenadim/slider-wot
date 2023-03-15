@@ -1,5 +1,5 @@
 export const swiperSettings = {
-    navigation: true,
+    navigation: false,
     speed: 1000,
     loop: true,
     slidesPerView: 6,
