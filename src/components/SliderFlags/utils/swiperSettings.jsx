@@ -1,24 +1,37 @@
-export const swiperSettings = {
+export const settings = {
+    infinite: true,
     speed: 1000,
-    spaceBetween: 10,
-    loop: false,
-    breakpoints: {
-        1720: {
-            slidesPerView: 6,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1720,
+            settings: {
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                touchMove: true,
+                draggable: true,
+            }
         },
-        1440: {
-            slidesPerView: 5,
+        {
+            breakpoint: 1440,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                touchMove: true,
+                draggable: true,
+            }
         },
-        640: {
-            slidesPerView: 4,
+        {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                speed: 500,
+                touchMove: true,
+                draggable: true,
+            }
         },
-        320: {
-            slidesPerView: 3,
-        },
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-        clickable: true,
-    },
+
+    ]
 };

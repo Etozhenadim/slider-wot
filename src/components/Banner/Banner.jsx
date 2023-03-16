@@ -20,9 +20,7 @@ export const Banner = () => {
                     <li>Tiger,</li>
                     <li>Pz. III</li>
                 </ul>
-
             </div>
-
         </div>
     )
 }

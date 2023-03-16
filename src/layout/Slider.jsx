@@ -1,6 +1,5 @@
 import './style.scss';
-import {Banner, Header, Registration} from '../components'
-import {SliderFlags} from "../components/SliderFlags/SliderFlags";
+import {Banner, Header, Registration, SliderFlags} from '../components';
 
 export const Slider = () => {
     return (

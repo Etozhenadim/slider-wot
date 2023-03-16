@@ -1,8 +1,7 @@
-.swiper {
+.slider_swiper {
   position: relative;
-  margin-top: auto;
-  position: relative;
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 40px;
   width: 100%;
   max-width: 1258px;
   height: 90px;
@@ -10,7 +9,7 @@
     height: 154px;
   }
 
-  &_container {
+  &--container {
     width: 100%;
     margin: 0 auto;
     @media (min-width: 768px) {
@@ -21,7 +20,7 @@
     }
   }
 
-  &_item {
+  &--item {
     position: relative;
     display: flex !important;
     flex-direction: column;
@@ -39,6 +38,7 @@
     & img {
       width: 100%;
       height: 100%;
+      max-height: 50px;
       transition: all .5s ease-out;
       @media (min-width: 640px) {
         max-height: 70px;
@@ -67,11 +67,7 @@
 }
 
 .slick-track {
-  //margin-top: 30px;
   background-clip: content-box;
-  margin-bottom: 10px;
-  padding-top: 100px; /* space required to display the hover effect*/
-  margin-top: -75px;
 }
 
 .slick-slide {
@@ -79,7 +75,10 @@
 
   &:hover {
     & img {
-      max-height: 94px;
+      max-height: 70px;
+      @media (min-width: 640px) {
+        max-height: 94px;
+      }
     }
 
     &:before {
@@ -88,13 +87,16 @@
       bottom: 12px;
       margin-left: 50px;
       background-clip: content-box;
-      width: 66px;
-      height: 66px;
+      width: 44px;
+      height: 44px;
       border-radius: 100%;
       background: #F25322;
-      //box-shadow: 0 0 20px 10px #F25322;
       filter: blur(30px);
       z-index: -1;
+      @media (min-width: 640px) {
+        width: 66px;
+        height: 66px;
+      }
     }
   }
 }
@@ -137,11 +139,11 @@
 }
 
 .slick-prev {
-  left: 0; /*todo fix */
+  left: 0;
 }
 
-.slick-next { /*todo make opposite button */
-  right: 0; /*todo fix */
+.slick-next {
+  right: 0;
   clip-path: polygon(100% 0%, 100% 67.6%, 72.41% 100%, 0% 100%, 0% 0%);
 
   &:before {
