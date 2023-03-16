@@ -1,13 +1,12 @@
-
-import { useRef } from 'react';
+import { useRef} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper';
+import { Autoplay, Navigation} from 'swiper';
 import './SwiperFlags.scss'
-import "swiper/css";
-// import "swiper/css/navigation";
 import {getSwiperNavigationSettings} from "./utils/getSwiperNavigationSettings";
 import {swiperSettings} from './swiperSettings'
 import {data} from './data'
+
+import 'swiper/css';
 
 
 
@@ -15,12 +14,13 @@ export const SwiperFlags = () =>{
     const prevButtonRef = useRef(null);
     const nextButtonRef = useRef(null);
     const swiperNavigation = getSwiperNavigationSettings(prevButtonRef, nextButtonRef);
+
     return (
         <div className='slider_swiper'>
             <Swiper
-                modules={[Pagination, Navigation, Autoplay]}
-                {...swiperNavigation}
+                modules={[ Navigation]}
                 {...swiperSettings}
+                {...swiperNavigation}
             >
                 {data && data.map(item=>{
                        return (

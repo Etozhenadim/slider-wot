@@ -1,54 +1,105 @@
-
-
 .banner {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: 100%;
-  max-width: 1440px;
-  height: 688px;
   background-image: url('../../../public/assets/banners/bg-nation-d.jpg');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @media (min-width: 1780px) {
+    max-width: 1440px;
+    padding: 0;
+  }
   &_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &:before{
+      content: '';
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../../public/assets/banners/germany.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      max-width: 592px;
+      max-height: 474px;
+      height: 100%;
+      z-index: 9;
+      //@media (min-width: 1780px) {
+      //  display: none;
+      //}
+    }
+  }
+  &_content{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
-    max-height: 540px;
+    max-height: 240px;
+    @media (min-width: 1780px ){
+      height: 100%;
+      max-height: 480px;
+    }
+    &--title {
+      font-weight: 900;
+      font-size: 53px;
+      line-height: 62px;
+      text-align: center;
+      -webkit-text-stroke: 2px #F9F5E1;
+      color: transparent;
+      @media (min-width: 1780px) {
+        font-size: 175px;
+        line-height: 205px;
+      }
   }
-  &_title {
-    font-weight: 900;
-    font-size: 175px;
-    line-height: 205px;
-    text-align: center;
-    -webkit-text-stroke: 2px #F9F5E1;
-    color: transparent;
   }
 
-  &_additional {
+  &_extra {
     margin-top: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    max-width: 302px;
+    text-align: center;
     z-index: 10;
+    max-height: 255px;
     &--title {
       font-weight: 700;
-      font-size: 175px;
-      line-height: 100%;
+      font-size: 70px;
+      line-height: 82px;
     }
     &--text {
       font-weight: 700;
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 12px;
+      line-height: 14px;
       text-align: center;
-
       color: rgba(249, 245, 225, 0.5);
+    }
+
+    @media (min-width: 1780px) {
+      width: 100%;
+      max-width: 616px;
+      &--title {
+        font-size: 175px;
+        line-height: 100%;
+      }
+      &--text {
+        font-size: 16px;
+        line-height: 19px;
+      }
     }
   }
 
@@ -56,15 +107,28 @@
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
-    min-width: 616px;
+
     font-weight: 800;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 18px;
     text-align: center;
+    @media (min-width: 1780px) {
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
 
   & img{
     position: absolute;
-    width: 100%;
+    bottom: 0;
+    max-height: 240px;
+    z-index: 9;
+    //@media (min-width: 640px) {
+    //  max-height: unset;
+    //}
+    @media (min-width: 1780px) {
+      max-height: 480px;
+      width: 100%;
+    }
   }
 }

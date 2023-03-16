@@ -1,12 +1,24 @@
 export const swiperSettings = {
-    navigation: false,
     speed: 1000,
-    loop: true,
-    slidesPerView: 6,
-    spaceBetween: 30,
-    // spaceBetween: 65,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    spaceBetween: 10,
+    loop: false,
+    breakpoints: {
+        1720: {
+            slidesPerView: 6,
+        },
+        1440: {
+            slidesPerView: 5,
+        },
+        640: {
+            slidesPerView: 4,
+        },
+        320: {
+            slidesPerView: 3,
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        clickable: true,
+    },
 };

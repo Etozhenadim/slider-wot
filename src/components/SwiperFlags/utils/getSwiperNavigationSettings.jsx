@@ -1,7 +1,7 @@
 export const getSwiperNavigationSettings = (
     prevButtonRef,
     nextButtonRef,
-    loop= false,
+    loop= true,
 ) => {
     const onInit = (
         prevButtonRef,

@@ -32,6 +32,31 @@ export const data = [
     },
     {
         id: 7,
+        icon: 'assets/flags/ussr.svg',
+        title: 'Ussr',
+    },
+    {
+        id: 8,
+        icon: 'assets/flags/de.svg',
+        title: 'Germany',
+    },
+    {
+        id: 9,
+        icon: 'assets/flags/us.svg',
+        title: 'Usa',
+    },
+    {
+        id: 10,
+        icon: 'assets/flags/fr.svg',
+        title: 'France',
+    },
+    {
+        id: 11,
+        icon: 'assets/flags/uk.svg',
+        title: 'United Kingdom',
+    },
+    {
+        id: 12,
         icon: 'assets/flags/cz.svg',
         title: 'Czechoslovakia',
     },

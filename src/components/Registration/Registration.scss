@@ -1,13 +1,20 @@
 .registration {
-  position: absolute;
-  left:0;
-  top: 0;
+  position: relative;
   display: flex;
   align-items: flex-end;
-  height: 606px;
-  max-width: 596px;
+  align-self: center;
+  @media (min-width: 1780px) {
+    height: 100%;
+    max-height: 606px;
+    max-width: 596px;
+    position: absolute;
+    left:0;
+    top: 0;
+    margin: 0;
+  }
   &:before{
     content: '';
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,47 +26,72 @@
     max-height: 474px;
     height: 100%;
     z-index: 9;
+    @media (min-width: 1780px) {
+      display: flex;
+    }
   }
   &_wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 98px;
+    align-items: center;
+    padding: 0 15px;
     z-index: 9;
+    @media (min-width: 1780px) {
+      align-items: flex-start;
+      padding-left: 98px;
+    }
     &--title{
       font-weight: 700;
-      font-size: 40px;
-      line-height: 47px;
-      max-height: 140px;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      @media (min-width: 640px) {
+        font-size: 40px;
+        line-height: 47px;
+      }
+      @media (min-width: 1780px) {
+        text-align: left;
+      }
+
     }
     &--text {
       margin-top: 18px;
-      max-width: 275px;
       font-weight: 700;
-      font-size: 16px;
-      line-height: 27px;
+      font-size: 12px;
+      line-height: 19px;
       color: rgba(249, 245, 225, 0.5);
+      text-align: center;
+      @media (min-width: 640px) {
+        font-size: 16px;
+        line-height: 27px;
+      }
+      @media (min-width: 1780px){
+        max-width: 275px;
+        text-align: left;
+      }
     }
     &--button {
       position: relative;
-      margin-top: 66px;
+      margin-top: 25px;
       padding: 15px 0;
       width: 308px;
       color: #F9F5E1;
+      text-align: center;
       font-weight: 700;
       font-size: 18px;
       line-height: 31px;
       text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51);
       text-transform: uppercase;
+      transition: all .15s ease-out;
       background: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%);
+      cursor: pointer;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 57.35%, 92.53% 100%, 0% 100%);
 
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0; right: 0;
-        border-bottom: 30px solid #1C1B16;
-        border-left: 30px solid transparent;
-        width: 0;
+      @media (min-width: 1780px){
+        margin-top: 66px;
+      }
+      &:hover {
+        background: linear-gradient(180deg, #D23E11 0%, rgba(155, 47, 14, 0.81) 48.96%, #CC390B 100%);
       }
 
     }
