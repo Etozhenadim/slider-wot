@@ -1,38 +1,34 @@
-import { useRef} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Navigation} from 'swiper';
 import './SwiperFlags.scss'
-import {getSwiperNavigationSettings} from "./utils/getSwiperNavigationSettings";
-import {swiperSettings} from './swiperSettings'
+import {swiperSettings} from './utils/swiperSettings'
 import {data} from './data'
 
 import 'swiper/css';
+import {useSwiperFlags} from "./useSwiperFlags";
 
 
-
-export const SwiperFlags = () =>{
-    const prevButtonRef = useRef(null);
-    const nextButtonRef = useRef(null);
-    const swiperNavigation = getSwiperNavigationSettings(prevButtonRef, nextButtonRef);
+export const SwiperFlags = () => {
+    const {prevButtonRef, nextButtonRef, swiperNavigation} = useSwiperFlags();
 
     return (
         <div className='slider_swiper'>
             <Swiper
-                modules={[ Navigation]}
+                modules={[Navigation]}
                 {...swiperSettings}
                 {...swiperNavigation}
             >
-                {data && data.map(item=>{
-                       return (
-                           <SwiperSlide key={item.id}>
-                           <div className='slider_swiper--item'>
-                               <img src={item.icon} alt={item.title}/>
-                               <span>
+                {data && data.map(item => {
+                    return (
+                        <SwiperSlide key={item.id}>
+                            <div className='slider_swiper--item'>
+                                <img src={item.icon} alt={item.title}/>
+                                <span>
                                {item.title}</span>
-                           </div>
-                         </SwiperSlide>
-                       )
-                    })
+                            </div>
+                        </SwiperSlide>
+                    )
+                })
                 }
             </Swiper>
             <>
