@@ -139,11 +139,11 @@
 }
 
 .slick-prev {
-  left: 0;
+  left: 15px;
 }
 
 .slick-next {
-  right: 0;
+  right: 15px;
   clip-path: polygon(100% 0%, 100% 67.6%, 72.41% 100%, 0% 100%, 0% 0%);
 
   &:before {
