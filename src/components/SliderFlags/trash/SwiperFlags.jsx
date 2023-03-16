@@ -1,8 +1,8 @@
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation} from 'swiper';
 import './SwiperFlags.scss'
-import {swiperSettings} from './utils/swiperSettings'
-import {data} from './data'
+import {swiperSettings} from '../utils/swiperSettings'
+import {data} from '../data'
 
 import 'swiper/css';
 import {useSwiperFlags} from "./useSwiperFlags";
@@ -23,6 +23,7 @@ export const SwiperFlags = () => {
                         <SwiperSlide key={item.id}>
                             <div className='slider_swiper--item'>
                                 <img src={item.icon} alt={item.title}/>
+
                                 <span>
                                {item.title}</span>
                             </div>

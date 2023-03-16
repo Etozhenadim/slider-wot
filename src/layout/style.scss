@@ -20,13 +20,17 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
+
 html {
   height: 100%;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -46,8 +50,8 @@ body {
   color: #F9F5E1;
   text-transform: uppercase;
   margin: 0 auto;
-  padding: 28px 0;
-  @media (min-width: $large){
+  //padding: 28px 0; todo
+  @media (min-width: $large) {
     max-height: 886px;
   }
 

@@ -1,5 +1,5 @@
 import {useRef} from "react";
-import {getSwiperNavigationSettings} from "./utils/getSwiperNavigationSettings";
+import {getSwiperNavigationSettings} from "../utils/getSwiperNavigationSettings";
 
 export const useSwiperFlags = () => {
     const prevButtonRef = useRef(null);
