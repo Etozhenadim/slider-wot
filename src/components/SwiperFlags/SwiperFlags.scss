@@ -1,12 +1,13 @@
 .slider_swiper{
+  margin-top: auto;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 100%;
   max-width: 1258px;
   height: 90px;
-  margin: 0 auto;
   @media (min-width: 640px) {
     height: 154px;
   }

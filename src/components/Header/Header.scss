@@ -1,17 +1,18 @@
+$large: 1760px;
+
 .slider_header {
   z-index: 999;
   width: 100%;
-  //margin: 25px 0 20px 0; /*todo */
-  @media (min-width: 1780px) {
-    position: absolute;
-    top: 60px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  @media (min-width: $large) {
     margin: 0;
   }
   &--title {
     font-weight: 800;
     font-size: 40px;
     text-align: center;
-    @media (min-width: 640px) {
+    @media (min-width: $large) {
       font-weight: 800;
       font-size: 85px;
       line-height: 100px;
