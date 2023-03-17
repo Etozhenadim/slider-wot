@@ -1,4 +1,4 @@
-.slider_swiper {
+.swiper {
   position: relative;
   margin: auto;
   margin-bottom: 40px;
@@ -9,7 +9,7 @@
     height: 154px;
   }
 
-  &--container {
+  &_container {
     width: 100%;
     margin: 0 auto;
     @media (min-width: 768px) {
@@ -20,7 +20,7 @@
     }
   }
 
-  &--item {
+  &_item {
     position: relative;
     display: flex !important;
     flex-direction: column;
@@ -106,7 +106,7 @@
   position: absolute;
   width: 58px;
   height: 58px;
-  background-color: #000000;
+  background-color: #000000 !important;
   color: #F9F5E1;
   cursor: pointer;
   top: 50%;
@@ -120,7 +120,7 @@
 
   &:before {
     content: '';
-    background-image: url("../../../public/assets/icons/arrow-left-solid.svg") !important; /*todo fix url path */
+    background-image: url("../../../public/assets/icons/arrow-left-solid.svg") !important;
     width: 22px;
     height: 22px;
     position: absolute;
@@ -131,7 +131,8 @@
   }
 
   &:hover {
-    background-color: #F25322; /*todo add hover transition effect */
+    background-color: #F25322 !important;
+
     &:before {
       filter: invert(100%);
     }
@@ -147,6 +148,6 @@
   clip-path: polygon(100% 0%, 100% 67.6%, 72.41% 100%, 0% 100%, 0% 0%);
 
   &:before {
-    transform: translate(-50%, -50%) rotate(-180deg); /*todo fix */
+    transform: translate(-50%, -50%) rotate(-180deg);
   }
 }

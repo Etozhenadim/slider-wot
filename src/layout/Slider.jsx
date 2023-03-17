@@ -1,15 +1,15 @@
 import "./style.scss";
-import { Banner, Header, Registration, SliderFlags } from "../components";
+import {Banner, Header, Registration, SwiperFlags} from "../components";
 
 export const Slider = () => {
-  return (
-    <div className="slider">
-      <Header />
-      <div className="slider_main">
-        <Registration />
-        <Banner />
-      </div>
-      <SliderFlags />
-    </div>
-  );
+    return (
+        <div className="slider">
+            <Header/>
+            <div className="slider_main">
+                <Registration/>
+                <Banner/>
+            </div>
+            <SwiperFlags/>
+        </div>
+    );
 };
