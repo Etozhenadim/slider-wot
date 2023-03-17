@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/sliderwot/static/css/main.ae6d83d2.css",
+    "main.js": "/sliderwot/static/js/main.8987a05e.js",
+    "static/media/bg-nation-d.jpg": "/sliderwot/static/media/bg-nation-d.16ee5c2498aed226ac84.jpg",
+    "static/media/germany.png": "/sliderwot/static/media/germany.55a631dbf9eed6abd74c.png",
+    "static/media/slick.svg": "/sliderwot/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/sliderwot/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/sliderwot/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/sliderwot/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/sliderwot/index.html",
+    "static/media/arrow-left-solid.svg": "/sliderwot/static/media/arrow-left-solid.cbe52438182fe06cc998.svg",
+    "main.ae6d83d2.css.map": "/sliderwot/static/css/main.ae6d83d2.css.map",
+    "main.8987a05e.js.map": "/sliderwot/static/js/main.8987a05e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae6d83d2.css",
+    "static/js/main.8987a05e.js"
+  ]
+}
