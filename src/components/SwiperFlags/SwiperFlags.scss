@@ -2,12 +2,11 @@
   position: relative;
   margin: auto;
   margin-bottom: 40px;
-  width: 100%;
-  max-width: 1258px;
-  height: 90px;
-  @media (min-width: 640px) {
-    height: 154px;
-  }
+
+  //height: 90px;
+  //@media (min-width: 640px) {
+  //  height: 154px;
+  //}
 
   &_container {
     width: 100%;

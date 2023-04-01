@@ -1,7 +1,6 @@
 {
   "name": "slider",
   "version": "0.1.0",
-  "homepage": "https://etozhenadim.github.io/sliderWoT",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,7 +13,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "swiper": "^9.1.0",
+    "swiper": "^9.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

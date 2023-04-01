@@ -1,18 +1,20 @@
 $large: 1760px;
 
 .registration {
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: flex-end;
   align-self: center;
   z-index: 10;
-  max-width: 1258px;
   @media (min-width: $large) {
+    position: absolute;
+    left: 90px;
     height: 100%;
     max-height: 606px;
     max-width: 596px;
     margin: 0;
   }
+
   &_wrapper {
     display: flex;
     flex-direction: column;
@@ -23,7 +25,8 @@ $large: 1760px;
       align-items: flex-start;
       padding-left: 98px;
     }
-    &--title{
+
+    &--title {
       font-weight: 700;
       font-size: 18px;
       line-height: 21px;
@@ -35,6 +38,7 @@ $large: 1760px;
       }
 
     }
+
     &--text {
       margin-top: 18px;
       font-weight: 700;
@@ -42,13 +46,14 @@ $large: 1760px;
       line-height: 19px;
       color: rgba(249, 245, 225, 0.5);
       text-align: center;
-      @media (min-width: $large){
+      @media (min-width: $large) {
         font-size: 16px;
         line-height: 27px;
         max-width: 275px;
         text-align: left;
       }
     }
+
     &--button {
       position: relative;
       display: flex;
@@ -68,13 +73,14 @@ $large: 1760px;
       background: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%);
       cursor: pointer;
       clip-path: polygon(0% 0%, 100% 0%, 100% 57.35%, 92.53% 100%, 0% 100%);
-      @media (min-width: 1780px){
+      @media (min-width: 1780px) {
         margin-top: 66px;
         height: 60px;
         width: 308px;
         font-size: 18px;
         line-height: 31px;
       }
+
       &:hover {
         background: linear-gradient(180deg, #D23E11 0%, rgba(155, 47, 14, 0.81) 48.96%, #CC390B 100%);
       }
