@@ -1,9 +1,10 @@
-import {configSliderNation} from "./configSliderNation";
+import {configSliderNation} from "./utils/configSliderNation";
 import {Swiper, SwiperSlide} from 'swiper/react'
-import {mock} from "./mock";
-import {MText} from "./Text";
+import {mock} from "./utils/mock";
+import {MText} from "./utils/Text";
 import './SliderNation.scss'
 
+console.log(mock)
 export const varsText = {
     hidden: {
         y: '10%',
@@ -31,7 +32,6 @@ export const SliderNation = () => {
                 <Swiper
                     className='slider-nation'
                     {...configSliderNation}
-                    // key={`slider-nation-${currentLangCode}`}
                 >
                     {mock.map(({
                                    id,
@@ -46,7 +46,9 @@ export const SliderNation = () => {
                                    altTanks
                                }) => (
                         <SwiperSlide className='slider-nation-slide' key={id}>
-                            <img className='img-flag-desktop' src={imgFlag} srcSet={imgFlagWebP} alt={nation}/>
+                            <picture>
+                                <img className='img img-flag-desktop' src={imgFlag} srcSet={imgFlagWebP} alt={nation}/>
+                            </picture>
                             <div className='content-slide'>
                                 <div className='picture-slide'>
                                     <picture>
@@ -72,11 +74,15 @@ export const SliderNation = () => {
                                         {...confTextAnimScroll}>
                                         {type}
                                     </MText>
-                                    <MText
-                                        className='text representation__technic'
-                                        {...confTextAnimScroll}>
-                                        {technic}
-                                    </MText>
+                                    <div className='representation__list'>
+                                        {technic && technic.map((name, index) => (
+                                            <MText className='text representation__technic' {...confTextAnimScroll}>
+                                                {`${name}`}
+                                                {index < technic.length - 1 && <span>, </span>}
+                                            </MText>
+                                        ))}
+                                    </div>
+
                                 </div>
                             </div>
                         </SwiperSlide>

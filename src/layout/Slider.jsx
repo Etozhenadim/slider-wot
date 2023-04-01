@@ -1,7 +1,5 @@
 import "./style.scss";
-import {Header} from "../components/Header/Header";
-import {Registration} from "../components/Registration/Registration";
-import {SliderNation} from "../components/Slider/SliderNation";
+import {Header, Registration, SliderNation} from "../components";
 
 export const Slider = () => {
     return (

@@ -51,32 +51,51 @@
     }
 
     &__quantity {
-      font-size: 7.5rem;
-      line-height: 7.313rem;
-      margin-bottom: 0.1875rem;
-      @media (max-width: 639px) {
-        font-size: 4.5rem;
-        line-height: 4.313rem;
+      font-size: 175px;
+      line-height: 117px;
+      margin-bottom: 10px;
+      transition: opacity .5s ease-in-out, visibility .5s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+      @media (max-width: 720px) {
+        font-size: 72px;
+        line-height: 88px;
         margin: 0;
       }
-      @media (max-width: 320px) {
-        font-size: 2.5rem;
-        line-height: 3.063rem;
+      @media (max-width: 480px) {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 38px;
       }
     }
 
     &__type {
-      font-size: 0.875rem;
-      line-height: 1.063rem;
+      font-size: 12px;
+      line-height: 14px;
       text-transform: uppercase;
-      margin-bottom: 1.125rem;
+      margin-bottom: 10px;
+      color: rgba(249, 245, 225, 0.5);
+      @media (min-width: 720px) {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+
     }
 
     &__technic {
-      font-size: 1.75rem;
+      font-size: 18px;
       line-height: 1.24;
-      @media (max-width: 320px) {
-        font-size: 1.5rem;
+      @media (min-width: 720px) {
+        font-size: 24px;
+      }
+      @media (min-width: 1100px) {
+        margin-bottom: 28px;
       }
     }
   }
@@ -86,6 +105,8 @@
 .slider_pagination {
   display: flex;
   justify-content: center;
+  gap: 69px;
+  max-width: 1920px;
 }
 
 // Pagination - Navigation Buttons
@@ -98,6 +119,9 @@
   cursor: pointer;
   z-index: 1;
   clip-path: polygon(100% 0%, 100% 60.8%, 100% 100%, 92.53% 100%, 29.31% 100%, 0% 65.52%, 0% 0%);
+  @media (max-width: 1440px) {
+    display: none;
+  }
 
   &:before {
     content: '';
@@ -134,12 +158,9 @@
   justify-content: space-around;
   align-items: center;
   z-index: 2;
-  //@media (max-width: 639px) {
-  //  justify-content: center;
-  //  width: 100%;
-  //  height: 2rem;
-  //  bottom: 1.5rem;
-  //}
+  @media (min-width: 1760px) {
+    gap: 10px;
+  }
 
   & .swiper-pagination-bullet {
     width: auto;
@@ -149,19 +170,15 @@
     background: none;
     opacity: 1;
     margin: 0;
-    //@media (max-width: 859px) {
-    //  margin: 0 0.3rem;
-    //}
   }
 
   .swiper-pagination-bullet {
     width: 6rem;
-    @media (max-width: 639px) {
+    @media (max-width: 1440px) {
       display: inline-block;
       width: 0.5rem;
       height: 0.5rem;
       background: #e9e2bf;
-      //background: $col_28;
       border-radius: 0;
       opacity: 0.4;
       margin: 0.3rem;
@@ -188,18 +205,24 @@
 
     &:hover {
       .swiper-pagination-bullet {
-        &__title,
-        &__quantity {
+        &__title {
           transform: scale(0);
         }
       }
     }
 
-    &__title,
-    &__quantity {
+    &__title {
       text-transform: uppercase;
       transition: transform 0.5s ease-in-out;
-      @media (max-width: 639px) {
+    }
+
+    &__title {
+      margin-top: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: rgba(249, 245, 225, 0.5);
+      @media (max-width: 1440px) {
         display: none;
       }
     }
@@ -207,7 +230,7 @@
     &__img {
       transition: transform 0.5s ease-in-out;
       will-change: transform;
-      @media (max-width: 639px) {
+      @media (max-width: 1440px) {
         display: none;
       }
     }
@@ -215,7 +238,6 @@
 
   & .swiper-pagination-bullet-active {
     @media (max-width: 639px) {
-      //background: $col_28;
       opacity: 1;
     }
 
@@ -224,8 +246,7 @@
     }
 
     .swiper-pagination-bullet {
-      &__title,
-      &__quantity {
+      &__title {
         transform: scale(0);
         transition: transform 0.3s ease-in-out;
       }
@@ -242,21 +263,21 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  background: url(/assets/nation/nation_bg.jpg) right 0.625rem / 72rem auto no-repeat;
-  @media (max-width: 639px) {
-    background-position: center 13.13rem;
+  background: url(/assets/nation/nation_bg.jpg) right 0.625rem / 80rem auto no-repeat;
+  @media (max-width: 1440px) {
+    background-position: center 0.13rem;
     background-size: contain;
   }
-  @media (max-width: 320px) {
-    background-position: center 10.63rem;
+  @media (max-width: 639px) {
+    background-position: center 6.13rem;
+  }
+  @media (max-width: 480px) {
+    background-position: center  -0.87rem;
   }
 }
 
 .nation {
   margin-bottom: 3.75rem;
-  @media (max-width: 639px) {
-    margin-bottom: 0.75rem;
-  }
 
   &__info {
     position: absolute;
@@ -280,19 +301,24 @@
     .slider-nation-slide {
       .content-slide {
         margin-left: auto;
-        //margin-top: 16.5rem;
         margin-top: 7.5rem;
+        @media (max-width: 1440px) {
+          margin-top: 8.5rem;
+        }
         @media (min-width: 1760px) {
           max-width: 1328px;
+        }
+        @media (max-width: 480px) {
+          margin-top: 2rem;
         }
       }
 
       .img-flag-desktop {
         display: none;
+        opacity: 0;
         position: absolute;
         top: 0;
-        left: 0;
-        transition: 1s opacity ease, 1s left ease;
+        left: 100%;
 
         @media (min-width: 1760px) {
           display: block;
@@ -308,12 +334,12 @@
 
         @media (max-width: 320px) {
           top: -0.8rem;
-          margin-top: 14.5rem;
+          //margin-top: 14.5rem;
         }
 
         .img {
           position: absolute;
-          top: 0;
+          top: 2rem;
           left: 0;
         }
 
@@ -323,12 +349,18 @@
           opacity: 0;
           z-index: -1;
           transition: 1s opacity ease, 1s left ease;
-          @media (min-width: 1760px) {
-            display: none;
-          }
-          @media (max-width: 320px) {
+
+
+          @media (max-width: 480px) {
             top: -2rem;
             height: 12rem;
+            max-width: 226px;
+          }
+          @media (max-width: 980px) {
+            max-width: 328px;
+          }
+          @media (min-width: 1760px) {
+            display: none;
           }
         }
 
@@ -340,28 +372,43 @@
 
       .title-slide {
         position: relative;
-        font-size: 7.5rem;
-        font-weight: 700;
-        line-height: 9rem;
+        font-width: 900;
+        font-size: 53px;
+        line-height: 62px;
         text-transform: uppercase;
-        margin-bottom: 9rem;
+        margin-bottom: 2rem;
         -webkit-text-stroke: 2px #F9F5E1;
         color: transparent;
+        z-index: 10;
+        @media (max-width: 480px) {
+          font-size: 36px;
+          line-height: 42px;
+        }
+        @media (min-width: 720px) {
+          font-size: 72px;
+          line-height: 86px;
+          margin-bottom: 6rem;
+        }
+        @media (min-width: 1440px) {
+          font-size: 175px;
+          line-height: 205px;
+          z-index: 0;
+        }
 
-        @media (max-width: 859px) {
-          font-size: 5.5rem;
-          line-height: 3.063rem;
-        }
-        @media (max-width: 639px) {
-          font-size: 4.5rem;
-          line-height: 1.063rem;
-          margin-bottom: 5rem;
-          z-index: 10;
-        }
-        @media (max-width: 320px) {
-          font-size: 2.5rem;
-          margin-bottom: 4rem;
-        }
+        //@media (max-width: 859px) {
+        //  font-size: 5.5rem;
+        //  line-height: 3.063rem;
+        //}
+        //@media (max-width: 639px) {
+        //  font-size: 4.5rem;
+        //  line-height: 1.063rem;
+        //  margin-bottom: 5rem;
+        //  z-index: 10;
+        //}
+        //@media (max-width: 320px) {
+        //  font-size: 2.5rem;
+        //  margin-bottom: 4rem;
+        //}
       }
 
       &.swiper-slide-duplicate-active,
@@ -372,6 +419,12 @@
             opacity: 0.8;
             transition: 1s opacity ease, 1s left ease;
           }
+        }
+
+        .img-flag-desktop {
+          left: 0;
+          opacity: 0.8;
+          transition: 1s opacity ease, 1s left ease;
         }
       }
 
@@ -423,12 +476,31 @@
         position: relative;
 
         &:hover {
+          &:before {
+            content: '';
+            position: absolute;
+            left: 17px;
+            bottom: 12px;
+            background-clip: content-box;
+            width: 66px;
+            height: 66px;
+            border-radius: 100%;
+            background: #F25322;
+            filter: blur(30px);
+            z-index: -1;
+            @media (max-width: 1440px) {
+              display: none;
+            }
+          }
+
           .swiper-pagination-bullet {
             &__img {
               transform: scale(2);
               position: relative;
               z-index: 1;
             }
+
+
           }
         }
 

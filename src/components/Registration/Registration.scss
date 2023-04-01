@@ -24,7 +24,7 @@ $medium: 1024px;
     z-index: 9;
     @media (min-width: $large) {
       align-items: flex-start;
-      padding-left: 98px;
+      max-width: 506px;
     }
 
     &--title {

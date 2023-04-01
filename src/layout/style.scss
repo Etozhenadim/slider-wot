@@ -28,7 +28,6 @@ a {
   color: inherit;
 }
 
-
 html {
   height: 100%;
 }
@@ -45,6 +44,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100vh;
@@ -55,27 +55,12 @@ body {
   color: #F9F5E1;
   text-transform: uppercase;
   margin: 0 auto;
-  //@media (min-width: $large) {
-  //  max-height: 886px;
-  //}
+
   &_container {
+    position: relative;
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
-  }
-
-  &_main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 45px;
-
-    @media (min-width: $large) {
-      flex-direction: row;
-      align-items: flex-end;
-    }
+    overflow: hidden;
   }
 }
