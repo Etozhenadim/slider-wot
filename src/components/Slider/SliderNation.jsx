@@ -1,10 +1,29 @@
 import {configSliderNation} from "./configSliderNation";
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {mock} from "./mock";
-
+import {MText} from "./Text";
 import './SliderNation.scss'
 
-console.log(mock)
+export const varsText = {
+    hidden: {
+        y: '10%',
+        opacity: 0,
+    },
+    visible: (custom) => ({
+        y: 0,
+        opacity: 1,
+        transition: {
+            delay: custom * 0.2,
+            duration: 1,
+        },
+    }),
+}
+export const confTextAnimScroll = {
+    initial: 'hidden',
+    whileInView: 'visible',
+    variants: varsText,
+    viewport: {once: false, amount: 0.2},
+}
 export const SliderNation = () => {
     return (
         <div className='nation'>
@@ -36,11 +55,28 @@ export const SliderNation = () => {
                                              alt={altTanks}/>
                                     </picture>
                                 </div>
-                                <h3 className='title-slide'> {nation} </h3>
+                                <MText
+                                    tag='h3'
+                                    className='title-slide'
+                                    {...confTextAnimScroll}>
+                                    {nation}
+                                </MText>
                                 <div className='representation'>
-                                    <p className='text representation__quantity'>  {quantity}</p>
-                                    <p className='text representation__type'>  {type}</p>
-                                    <p className='text representation__technic'>  {technic}</p>
+                                    <MText
+                                        className='text representation__quantity'
+                                        {...confTextAnimScroll}>
+                                        {quantity}
+                                    </MText>
+                                    <MText
+                                        className='text representation__type'
+                                        {...confTextAnimScroll}>
+                                        {type}
+                                    </MText>
+                                    <MText
+                                        className='text representation__technic'
+                                        {...confTextAnimScroll}>
+                                        {technic}
+                                    </MText>
                                 </div>
                             </div>
                         </SwiperSlide>

@@ -1,4 +1,5 @@
 $large: 1760px;
+$medium: 1024px;
 
 .registration {
   display: flex;
@@ -32,9 +33,11 @@ $large: 1760px;
       line-height: 21px;
       text-align: center;
       @media (min-width: $large) {
+        text-align: left;
+      }
+      @media (min-width: $medium) {
         font-size: 40px;
         line-height: 47px;
-        text-align: left;
       }
 
     }
@@ -47,10 +50,15 @@ $large: 1760px;
       color: rgba(249, 245, 225, 0.5);
       text-align: center;
       @media (min-width: $large) {
+        text-align: left;
+      }
+      @media (min-width: $medium) {
         font-size: 16px;
         line-height: 27px;
-        max-width: 275px;
         text-align: left;
+      }
+      @media (max-width: 380px) {
+        max-width: 275px;
       }
     }
 

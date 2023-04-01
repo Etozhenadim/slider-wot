@@ -32,8 +32,8 @@ export const configSliderNation = {
 			</div>`
         }
     },
-    // simulateTouch: false,
+    simulateTouch: false,
     touchRatio: 1,
     touchAngle: 45,
-    // grabCursor: false
+    grabCursor: false
 }
