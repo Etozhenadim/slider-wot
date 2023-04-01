@@ -84,8 +84,10 @@
     &__list {
       display: flex;
       justify-content: center;
-      gap: 15px;
-
+      flex-wrap: wrap;
+      @media (min-width: 1760px) {
+        gap: 15px;
+      }
     }
 
     &__technic {
@@ -265,7 +267,7 @@
   text-align: center;
   background: url(/assets/nation/nation_bg.jpg) right 0.625rem / 80rem auto no-repeat;
   @media (max-width: 1440px) {
-    background-position: center 0.13rem;
+    background-position: center 3.13rem;
     background-size: contain;
   }
   @media (max-width: 639px) {
