@@ -2,9 +2,9 @@ import {configSliderNation} from "./utils/configSliderNation";
 import {Swiper, SwiperSlide} from 'swiper/react'
 import {mock} from "./utils/mock";
 import {MText} from "./utils/Text";
+import {IconSVG} from "./utils/IconSVG";
 import './SliderNation.scss'
 
-console.log(mock)
 export const varsText = {
     hidden: {
         y: '10%',
@@ -87,6 +87,14 @@ export const SliderNation = () => {
                             </div>
                         </SwiperSlide>
                     ))}
+                    <div className='nav-slider'>
+                        <button id='slider-nation-btn-prev' className='nav-slider__btn-prev'>
+                            <IconSVG title={'prevSlide'} idsymbol='arrow-left'/>
+                        </button>
+                        <button id='slider-nation-btn-next' className='nav-slider__btn-next'>
+                            <IconSVG title={'nextSlide'} idsymbol='arrow-right'/>
+                        </button>
+                    </div>
                     <div className='slider_pagination'>
                         <button id='slider-nation-btn-prev' className='nav-slider__btn-prev'></button>
                         <div id='pagin-slider-nation'

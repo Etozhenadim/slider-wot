@@ -7,11 +7,6 @@ export const Slider = () => {
             <div className="slider_container">
                 <Header/>
                 <Registration/>
-                {/*<div className="slider_main">*/}
-                {/*    <Registration/>*/}
-                {/*    <Banner/>*/}
-                {/*</div>*/}
-                {/*<SwiperFlags/>*/}
                 <SliderNation/>
             </div>
         </div>
