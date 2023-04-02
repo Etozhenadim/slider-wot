@@ -74,14 +74,15 @@ export const SliderNation = () => {
                                         {...confTextAnimScroll}>
                                         {type}
                                     </MText>
-                                    <div className='representation__list'>
+                                    <ul className='representation__list'>
                                         {technic && technic.map((name, index) => (
-                                            <MText className='text representation__technic' {...confTextAnimScroll}>
+                                            <MText tag='li'
+                                                   className='text representation__technic' {...confTextAnimScroll}>
                                                 {`${name}`}
                                                 {index < technic.length - 1 && <span>, </span>}
                                             </MText>
                                         ))}
-                                    </div>
+                                    </ul>
 
                                 </div>
                             </div>

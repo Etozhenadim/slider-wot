@@ -22,6 +22,10 @@ $medium: 1024px;
     align-items: center;
     padding: 0 15px;
     z-index: 9;
+    max-width: 290px;
+    @media (min-width: 768px) {
+      max-width: unset;
+    }
     @media (min-width: $large) {
       align-items: flex-start;
       max-width: 506px;
@@ -43,22 +47,23 @@ $medium: 1024px;
     }
 
     &--text {
-      margin-top: 18px;
+      margin-top: 10px;
       font-weight: 700;
       font-size: 12px;
       line-height: 19px;
       color: rgba(249, 245, 225, 0.5);
       text-align: center;
-      @media (min-width: $large) {
-        text-align: left;
+      @media (max-width: 480px) {
+        max-width: 206px;
       }
       @media (min-width: $medium) {
+        margin-top: 18px;
         font-size: 16px;
         line-height: 27px;
         text-align: left;
       }
-      @media (max-width: 380px) {
-        max-width: 275px;
+      @media (min-width: $large) {
+        text-align: left;
       }
     }
 
@@ -81,7 +86,7 @@ $medium: 1024px;
       background: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%);
       cursor: pointer;
       clip-path: polygon(0% 0%, 100% 0%, 100% 57.35%, 92.53% 100%, 0% 100%);
-      @media (min-width: 1780px) {
+      @media (min-width: $medium) {
         margin-top: 66px;
         height: 60px;
         width: 308px;
