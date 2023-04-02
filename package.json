@@ -1,7 +1,7 @@
 {
   "name": "slider",
   "version": "0.1.0",
-  "homepage": "https://etozhenadim.github.io/sliderWoT",
+  "homepage": "https://etozhenadim.github.io/slider-wot",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
