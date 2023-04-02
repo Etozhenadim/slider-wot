@@ -26,8 +26,8 @@ export const configSliderNation = {
             return `
 			<div class="${className}">
 				<picture>
-					<source srcset="${mock[index].imgPaginWebP}" type="image/webp">
-					<img class="${className}__img" src="${mock[index].imgPagin}" alt="${mock[index].nation}">
+					<source srcset="${process.env.PUBLIC_URL}${mock[index].imgPaginWebP}" type="image/webp">
+					<img class="${className}__img" src="${process.env.PUBLIC_URL}${mock[index].imgPagin}" alt="${mock[index].nation}">
 				</picture>
 				<div class="${className}__title">${mock[index].nation}</div>
 			</div>`

@@ -47,13 +47,16 @@ export const SliderNation = () => {
                                }) => (
                         <SwiperSlide className='slider-nation-slide' key={id}>
                             <picture>
-                                <img className='img img-flag-desktop' src={imgFlag} srcSet={imgFlagWebP} alt={nation}/>
+                                <img className='img img-flag-desktop' src={`${process.env.PUBLIC_URL}${imgFlag}`}
+                                     srcSet={`${process.env.PUBLIC_URL}${imgFlagWebP}`} alt={nation}/>
                             </picture>
                             <div className='content-slide'>
                                 <div className='picture-slide'>
                                     <picture>
-                                        <img className='img img-flag' src={imgFlag} srcSet={imgFlagWebP} alt={nation}/>
-                                        <img className='img img-tanks' src={imgTanks} srcSet={imgTanksWebP}
+                                        <img className='img img-flag' src={`${process.env.PUBLIC_URL}${imgFlag}`}
+                                             srcSet={`${process.env.PUBLIC_URL}${imgFlagWebP}`} alt={nation}/>
+                                        <img className='img img-tanks' src={`${process.env.PUBLIC_URL}${imgTanks}`}
+                                             srcSet={`${process.env.PUBLIC_URL}${imgTanksWebP}`}
                                              alt={altTanks}/>
                                     </picture>
                                 </div>
@@ -83,7 +86,6 @@ export const SliderNation = () => {
                                             </MText>
                                         ))}
                                     </ul>
-
                                 </div>
                             </div>
                         </SwiperSlide>
